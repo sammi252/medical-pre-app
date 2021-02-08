@@ -1,0 +1,16 @@
+{
+    "title": "Terms of use",
+    "header": [
+        "DISCLAIMER: THIS RISK ASSESSMENT DOES NOT PROVIDE A MEDICAL SERVICE OF ANY KIND. THE INFORMATION CONTAINED IN THE RISK ASSESSMENT IS FOR YOUR SUPPLEMENTAL USE ONLY AND IS NOT INTENDED TO DIAGNOSE, CURE, MITIGATE, TREAT, OR PREVENT DISEASE OR OTHER CONDITIONS AND IS NOT INTENDED TO PROVIDE A DETERMINATION OR ASSESSMENT OF YOUR STATE OF HEALTH.",
+
+        "THE APPLICATION MAKES NO WARRANTIES, EXPRESSED OR IMPLIED, IN CONNECTION WITH THE RISK ASSESSMENT OR THE PERFORMANCE OF THE RISK ASSESSMENT, NOR SHALL THE APPLICATION'S LICENSORS OR THE HOSPITAL BE HELD RESPONSIBLE OR LIABLE FOR ANY COSTS OR DAMAGES RELATED TO USE OF THE RISK ASSESSMENT OR ANY INFORMATION PROVIDED THEREFROM."
+    ],
+    "body": [
+        "Surgical Risk Calculator estimates the chance of an unfavorable outcome (such as a complication or death) after surgery.",
+        "The risk is estimated based upon information the patient gives to the healthcare provider about prior health history.",
+        "Please note the risk percentages provided to you by the  Risk Application are only estimates.",
+        "The risk estimate only takes certain information into account. There may be other factors that are not included in the estimate which may increase or decrease the risk of a complication or death.",
+        "These estimates are not a guarantee of results. A complication after surgery may happen even if the risk is low. This information is not intended to replace the expert judgment of a doctor or healthcare provider about the diagnosis, treatment, or potential outcomes.",
+        "The application is not responsible for medical decisions that may be made based on the risk calculator estimates, since these estimates are provided for supplemental purposes."
+    ]
+}

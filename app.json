@@ -1,0 +1,16 @@
+{
+  "name": "MedicalPreOpApp",
+  "displayName": "MedicalPreOpApp",
+  "expo": {
+    "name": "MedicalPreOpApp",
+    "slug": "MedicalPreOpApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.test.tellall"
+    }
+  }
+}
+

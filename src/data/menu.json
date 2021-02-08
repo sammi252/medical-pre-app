@@ -1,0 +1,99 @@
+{
+    "menu": [
+        {
+            "title": "Cardiology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "General Preop",
+                    "url": "Systems",
+                    "value": false,
+                    "proc_name": "periop_cardiac"
+                },
+                {
+                    "key": "Valvular Disorders",
+                    "url": "Systems",
+                    "value": false,
+                    "proc_name": "periop_cardiac"
+                }
+            ]
+        },
+        {
+            "title": "Pulmonology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Hepatology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Endocrinology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Transplant Medicine",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Nephrology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Rheumatology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        },
+        {
+            "title": "Hematology",
+            "description": "Some description about the Cardiac system!",
+            "data": [
+                {
+                    "key": "Lung Walkthrough",
+                    "value": false,
+                    "proc_name": "cardio1"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,225 @@
+{
+    "questions":[{
+        "id": 0,
+        "description": "Emergency?",
+        "additional_info": "Press yes if you are in immediate need of Emergency Surgery.",
+        "options": [{
+            "text": "Yes",
+            "id": 1
+        }, {
+            "text": "No",
+            "id": 2
+        }]
+    },
+    {
+        "id": 1,
+        "description": "Proceed to Surgery",
+        "additional_info": "",
+        "options": []
+    },
+    {
+        "id": 2,
+        "description": "ACS (acute coronary syndrome)",
+        "additional_info": "Acute coronary syndrome (ACS) happens when the heart is not getting enough blood.",
+        "options": [{
+            "text": "Yes",
+            "id": 3
+        },
+        {
+            "text": "No",
+            "id": 4
+        }]
+    },{
+        "id": 3,
+        "description": "Evaluate and treat according to GDMT",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 4
+        }]
+    },{
+        "id": 4,
+        "description": "Estimated perioperative risk of MACE.",
+        "additional_info": "Evaluate based on either the Revised Cardiac Risk Index for Pre-Operative Risk (RCRI) calculator or the ACS NSQIP Surgical Risk Calculator.",
+        "calculator" : {
+            "name": "RCRI Calculator",
+            "questions": [{
+                "text": "High-risk surgery",
+                "score": 1
+            },
+            {
+                "text": "History of ischemic heart disease",
+                "score": 1
+            },
+            {
+                "text": "History of congestive heart failure",
+                "score": 1
+            },
+            {
+                "text": "Pre-operative treatment with insulin",
+                "score": 1
+            },
+            {
+                "text": "Pre-operative creatinine >2 mg/dL / 176.8 µmol/L",
+                "score": 1
+            }],
+            "actions": [{
+                    "min": 0,
+                    "max": 2,
+                    "index": 1
+                },
+                {
+                    "min": 2,
+                    "max": 10,
+                    "index": 5
+                }
+            ]
+        },
+        "extern_link": {
+            "name": "NSQIP Calculator",
+            "description": "Or use the ",
+            "link": "https://riskcalculator.facs.org/RiskCalculator/"
+        },
+        "options": [{
+            "text": "Low Risk ( < 1%)",
+            "id": 88
+        },
+        {
+            "text": "Elevated Risk ( > 1%)",
+            "id": 5
+        }]
+    },
+    {
+        "id": 99,
+        "description": "Estimated perioperative risk of MACE",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "calculator" : {
+            "questions": [{
+                "text": "High-risk surgery",
+                "score": 1
+            },
+            {
+                "text": "History of ischemic heart disease",
+                "score": 1
+            },
+            {
+                "text": "History of congestive heart failure",
+                "score": 1
+            },
+            {
+                "text": "Pre-operative treatment with insulin",
+                "score": 1
+            },
+            {
+                "text": "Pre-operative creatinine >2 mg/dL / 176.8 µmol/L",
+                "score": 1
+            }],
+            "actions": [{
+                    "min": 0,
+                    "max": 2,
+                    "index": 1
+                },
+                {
+                    "min": 2,
+                    "max": 10,
+                    "index": 5
+                }
+            ]
+        },
+        "options": []
+    },
+    {
+        "id": 100,
+        "description": "NSQIP Calculator",
+        "additional_info": "Please press the link below and follow the directions. Then, press on the matching results",
+        "link": "NSQIP External Calculator",
+        "options": [{
+
+            "text": "Low Risk ( < 1%)",
+            "id": 5
+        },
+        {
+            "text": "Elevated Risk ( > 1%)",
+            "id": 6
+        }]
+    },
+    {
+        "id": 5,
+        "description": "Moderate or greater (>= 4 METs) functional capacity",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "No or unknown",
+            "id": 6
+        },
+        {
+            "text": "Moderate/good (>= 4-10 METs)",
+            "id": 7
+        },
+        {
+            "text": "Excellent (> 10 METs)",
+            "id": 8
+        }]
+    },{
+        "id": 6,
+        "description": "Poor OR unknown functional capacity (<4 METS)?",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Yes",
+            "id": 10
+        },{
+            "text": "No",
+            "id": 9
+        }]
+    },{
+        "id": 7,
+        "description": "No further testing (class IIb)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 1
+        }]
+    },{
+        "id": 8,
+        "description": "No further testing (class IIa)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 1
+        }]
+    },{
+        "id": 9,
+        "description": "Proceed to surgery according to GDMT OR alternative strategies (noninvasive treatment, palliation)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 1
+        }]
+    },{
+        "id": 10,
+        "description": "Pharmacologic stress testing (class IIa)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Normal",
+            "id": 9
+        },{
+            "text": "Abnormal",
+            "id": 11
+        }]
+    },{
+        "id": 11,
+        "description": "Coronary revascularization according to CPGs (class I)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 9
+        }]
+    },{
+        "id": 88,
+        "description": "No further testing (class III NB)",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "Next",
+            "id": 1
+        }]
+    }]
+}
