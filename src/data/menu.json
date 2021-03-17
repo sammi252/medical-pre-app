@@ -6,13 +6,13 @@
             "data": [
                 {
                     "key": "General Preop",
-                    "url": "Systems",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "periop_cardiac"
                 },
                 {
                     "key": "Valvular Disorders",
-                    "url": "Systems",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "periop_cardiac"
                 }
@@ -24,6 +24,7 @@
             "data": [
                 {
                     "key": "Lung Walkthrough",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "cardio1"
                 }
@@ -34,9 +35,10 @@
             "description": "Some description about the Cardiac system!",
             "data": [
                 {
-                    "key": "Lung Walkthrough",
+                    "key": "Hep Walkthrough",
+                    "url": "Hepatology",
                     "value": false,
-                    "proc_name": "cardio1"
+                    "proc_name": "periop_endo"
                 }
             ]
         },
@@ -45,9 +47,10 @@
             "description": "Some description about the Cardiac system!",
             "data": [
                 {
-                    "key": "Lung Walkthrough",
+                    "key": "Glucocorticoids and Surgery",
+                    "url": "Endocrinology",
                     "value": false,
-                    "proc_name": "cardio1"
+                    "proc_name": "periop_endo"
                 }
             ]
         },
@@ -57,6 +60,7 @@
             "data": [
                 {
                     "key": "Lung Walkthrough",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "cardio1"
                 }
@@ -68,6 +72,7 @@
             "data": [
                 {
                     "key": "Lung Walkthrough",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "cardio1"
                 }
@@ -79,6 +84,7 @@
             "data": [
                 {
                     "key": "Lung Walkthrough",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "cardio1"
                 }
@@ -90,6 +96,7 @@
             "data": [
                 {
                     "key": "Lung Walkthrough",
+                    "url": "Cardiology",
                     "value": false,
                     "proc_name": "cardio1"
                 }

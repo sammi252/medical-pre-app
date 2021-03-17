@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import {
   Button,
@@ -6,10 +5,8 @@ import {
   Text,
   ScrollView,
   Linking,
-  TouchableOpacity,
 } from "react-native";
 import CustomButton from "../components/Button.js";
-import Info from "../components/Button.js";
 import styles from "../styles/Styles.js"; // Our stylesheet.
 import parse from "../data/parser";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -30,7 +27,6 @@ class System extends Component {
       ).fill(false),
       info: false,
     });
-
   }
 
   setCalcOption(idx, value) {
@@ -70,21 +66,6 @@ class System extends Component {
   }
 
   /**
-   * Sets up the advanced calculator on the screen so that additional information
-   * can be taken into account during the course of an assessment (i.e., maybe a
-   * patients heart disease risk needs to be calculated, this calculator would help
-   * take care of that).
-   * @param {*} cur is the current value that was selected.
-   */
-  advanceCalculator(cur) {
-    let num_yes = this.state.calc_opts.filter((x) => x).length;
-    cur.calculator.actions.forEach((x) => {
-      if (num_yes >= x.min && num_yes <= x.max) this.selectOption(x.index);
-    });
-  }
-
-
-  /**
    * Resets the algorithm to the first question in the assessment. All information
    * for the previous assessment is lost.
    */
@@ -95,7 +76,7 @@ class System extends Component {
   constructor(props) {
     super(props);
     this.subsystem = parse(props.route.params.subsystem);
-    this.state = { question_index: 0 , hist: [], calc_opts: [], info: false };
+    this.state = { question_index: 0, hist: [], calc_opts: [], info: false };
   }
 
   render() {
@@ -112,8 +93,29 @@ class System extends Component {
             // This gets the title text of each question.
           }
 
-          <View style={{ flexDirection: "row" }}>
-            <Text style={styles.questionTitleText}>
+          <View style={{ flexDirection: "column" }}>{
+            <Text style={styles.questionTitleText}>When to Give Stress Dose Steroids:</Text>}
+            {cur.extern_link && (
+            <Text style={{ marginTop: 0, marginBottom: 20, fontSize: 16 }}>
+              {cur.extern_link.description}
+              <Text
+                onPress={() => {
+                  Linking.openURL(cur.extern_link.link);
+                }}
+                style={{
+                  color: "#bb0000",
+                  fontWeight: "bold",
+                  borderColor: "#bb0000",
+                  borderWidth: 2,
+                }}
+              >
+                {cur.extern_link.name}
+                <Icon name={"launch"} size={16} color={Colors.PRIMARY} />
+              </Text>
+              .
+            </Text>
+          )}
+            {/*<Text style={styles.questionTitleText}>
               {cur.description}
               {cur.additional_info.length > 0 && (
                 <TouchableOpacity
@@ -127,13 +129,12 @@ class System extends Component {
                   />
                 </TouchableOpacity>
               )}
-            </Text>
+            </Text>*/}
           </View>
 
           {
             // Check to see if there is a calculator in our algorithm.
           }
-
           {cur.calculator && (
             <View
               style={{
@@ -152,26 +153,21 @@ class System extends Component {
                   style={{
                     paddingLeft: 5,
                     paddingRight: 5,
-                  }} > 
-
+                  }}
+                >
                   <View
                     style={{
                       padding: 2,
                       flex: 1,
                       flexDirection: "row",
                       justifyContent: "space-between",
-                    }} >
-
-                    <Text style={{ width: 200, height: 50 }}>{c.text}</Text>
-                    <CustomButton
+                    }}
+                  >
+                    <Text style={{ width: 275, height: 52 }}>{c.text}</Text>
+                    <CheckBox
                       onPress={() => this.setCalcOption(idx, false)}
                       type={this.state.calc_opts[idx] ? "outline" : "filled"}
                       title={"No"}
-                    />
-                    <CustomButton
-                      onPress={() => this.setCalcOption(idx, true)}
-                      type={this.state.calc_opts[idx] ? "filled" : "outline"}
-                      title={"Yes"}
                     />
                   </View>
                 </View>
@@ -191,29 +187,9 @@ class System extends Component {
             // Check to see if there is an external link in our calculator.
           }
 
-          {cur.extern_link && (
-            <Text style={{ marginTop: 15, marginBottom: 15, fontSize: 16 }}>
-              {cur.extern_link.description}
-              <Text
-                onPress={() => {
-                  Linking.openURL(cur.extern_link.link);
-                }}
-                style={{
-                  color: "#bb0000",
-                  fontWeight: "bold",
-                  borderColor: "#bb0000",
-                  borderWidth: 2,
-                }}
-              >
-                {cur.extern_link.name}
-                <Icon name={"launch"} size={16} color={Colors.PRIMARY} />
-              </Text>
-              
-            </Text>
-          )}
-
-          {cur.options.map((c, index) => (
-            <View key={index} style={styles.seperator}>
+          {
+              cur.options.map((c, index) => (
+              <View key={index} style={styles.seperator}>
               <CustomButton
                 onPress={() => this.selectOption(c.id)}
                 style={styles.button}
@@ -230,7 +206,7 @@ class System extends Component {
           )}
         </ScrollView>
 
-        <View style={ styles.footer }>
+        <View style={styles.footer}>
           <View style={styles.footerButtonView}>
             <Button
               onPress={() => {
@@ -238,7 +214,7 @@ class System extends Component {
               }}
               disabled={this.state.hist.length == 0}
               title={"Back"}
-              size={"small"}
+              size={"Small"}
             />
           </View>
           <View style={styles.footerButtonView}>

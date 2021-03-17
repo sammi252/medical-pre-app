@@ -30,7 +30,7 @@ const Disclaimer = () => {
           <Button
             size="large"
             type="filled"
-            title="I agree to the Terms of Use"
+            title="I AGREE TO THE TERMS OF USE"
             onPress={() => {
               setModalVisible(!modalVisible);
             }}

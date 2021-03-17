@@ -7,7 +7,7 @@ import Disclaimer from "../components/Disclaimer";
 
 /**
  * The landing page for the App. We render an expandable list that has individual
- * items that expand to list the subsytems. The client will then select the sub-
+ * items that expand to list the subsystems. The client will then select the sub-
  * system that they want to run from the list of available subsystems for the given
  * system. Each time the app restarts, the client will need to accept a disclaimer
  * due to health care laws.
@@ -26,12 +26,13 @@ export default class Home extends Component {
    */
   renderList = () => {
     const systems = [];
-    this.state.menu.map((system) =>
+    this.state.menu.map((menu_list) =>
       systems.push(
         <List
-          title={system.title}
-          key={system.title}
-          data={system.data}
+        
+          title={menu_list.title}
+          key={menu_list.title}
+          data={menu_list.data}
           navigation={this.props.navigation}
         />
       )

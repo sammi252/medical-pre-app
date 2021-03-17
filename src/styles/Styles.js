@@ -83,7 +83,7 @@ export default StyleSheet.create({
     color: Colors.TITLE_TEXT,
     fontSize: 18,
     fontWeight: "500",
-    marginBottom: 15,
+    marginBottom: 10,
   },
 
   calculatorTitleText: {
@@ -91,7 +91,7 @@ export default StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     textAlign: "center",
-    marginBottom: 10,
+    marginBottom: 0,
     paddingTop: 6,
     backgroundColor: Colors.PRIMARY,
     paddingBottom: 6,
@@ -192,7 +192,11 @@ export default StyleSheet.create({
   buttonText: {
     fontWeight: "bold",
     fontSize: 16,
-    textTransform: "uppercase",
+    textAlign: "center",
+  },
+  checkText: {
+    fontWeight: "bold",
+    fontSize: 10,
     textAlign: "center",
   },
 
@@ -353,7 +357,7 @@ export default StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 10,
+    padding: 15,
   },
 
   footerButtonView: {

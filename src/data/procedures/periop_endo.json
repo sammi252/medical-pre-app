@@ -1,0 +1,98 @@
+{
+    "questions": [
+
+    {
+        "id": 0,
+        "description": "Estimated HPA Suppression Risk",
+        "additional_info": "When to Give Stress Dose Steroids:",
+        "calculator" : {
+            "name": "Mark any statement that applies to the patient:",
+            "questions": [{
+                "text": "1. Emergency Surgery?"
+            },
+            {
+                "text": "2. Takes any dose of oral steroids in the evening?"
+            },
+            {
+                "text": "3. Takes < 5mg/day of prednisone equivalent oral steroids in the morning?"
+            },
+            {
+                "text": "4. Takes 5mg-10mg of prednisone equivalent oral steroids in the morning?"
+            },
+            {
+                "text": "5. Takes < 10mg/day of prednisone equivalent oral steroids in the morning?"
+            },
+            {
+                "text": "6. Has been on oral steroids at doses ≥ to 5mg/day of prednisone equivalent in the past year?"
+            },
+            {
+                "text": "7. Has only been using steroids (inhaled, topical, or oral) for 3 weeks or less?"
+            },
+            {
+                "text": "8. Has cushing features?"
+            },
+            {
+                "text": "9. Takes inhaled steroids at a dose of 750mcg Fluticasone or 1500mcg for other inhaled steroids daily?"
+            },
+            {
+                "text": "10. Takes greater than 2 grams per day of class I-III topical steroids?"
+            }],
+            "scores": ["1", "2", "3"]
+        },
+        "extern_link": {
+            "name": "Prednisone Equivalent Dose Calculator",
+            "description": "",
+            "link": "https://google.com"
+        },
+        "options": [{
+            "text": "See Results",
+            "id": 1
+        },
+        {
+            "text": "See Results",
+            "id": 2
+        },
+        {
+            "text": "See Results",
+            "id": 3
+        }]
+    }, {
+        "id": 1,
+        "description": "Proceed to Surgery on current dose.",
+        "additional_info": "Level of Evidence: 2C",
+        "options": []
+    }, {
+        "id": 2,
+        "description": "Provide stress dose steroids.",
+        "additional_info": "Level of Evidence: 2C",
+        "options": []
+    }, {
+        "id": 3,
+        "description": "Test HPA Suppression Risk:\n\nEarly AM Cortisol 24 off Steroids",
+        "additional_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae.",
+        "options": [{
+            "text": "< 5mcg/dL",
+            "id": 2
+        },
+        {
+            "text": "> 10mcg/dL",
+            "id": 1
+        },
+        {
+            "text": "5-10mcg/dL",
+            "id": 4
+        }]
+    }, {
+        "id": 4,
+        "description": "ACTH Stim Test\n\nCortisol Result:",
+        "additional_info": "Level of Evidence: 2C",
+        "options": [{
+            "text": "≤ 18mcg/dL",
+            "id": 2
+        },
+        {
+            "text": "> 18mcg/dL",
+            "id": 1
+        }]
+    }
+    ]}

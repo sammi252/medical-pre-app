@@ -21,33 +21,30 @@ export default class List extends Component {
       data: props.data,
       expanded: false,
     };
-  }
 
-  /**
-   * Expands the subsytem list item that was clicked.
-   * @param {*} index - the list item that was clicked on.
-   */
-  onClick = (index) => {
-    const temp = this.state.data.slice();
-    temp[index].value = !temp[index].value;
-    this.setState({ data: temp });
-  };
+  }
 
   // We collapse the list if it is already expanded and expand it if
   // it is collapsed. This requires the use of a state variable, as
-  // of 11/11/2020, that gets created during the iniitialization phase.
+  // of 11/11/2020, that gets created during the initialization phase.
   toggleExpand = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({ expanded: !this.state.expanded });
   };
 
+
+
   render() {
     return (
       <View>
+       <TouchableOpacity onPress={() => this.toggleExpand()}>
+
         <View
           style={this.state.expanded ? styles.listRowExpanded : styles.listRow}
         >
+
           <Text style={[styles.listTitle]}>{this.props.title}</Text>
+
           <View style={{ display: "flex", flexDirection: "row" }}>
             <Icon
               name={"star-border"}
@@ -72,7 +69,10 @@ export default class List extends Component {
               />
             </TouchableOpacity>
           </View>
+
         </View>
+        </TouchableOpacity>
+
         {this.state.expanded && (
           <View style={styles.nestedListContainer}>
             <FlatList
@@ -90,7 +90,7 @@ export default class List extends Component {
                     key={item.proc_name}
                     style={[styles.nestedListRow]}
                     onPress={() =>
-                      this.props.navigation.navigate("Systems", {
+                      this.props.navigation.navigate(item.url, {
                         subsystem: item.proc_name,
                       })
                     }
