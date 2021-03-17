@@ -38,7 +38,6 @@ export default class List extends Component {
     return (
       <View>
        <TouchableOpacity onPress={() => this.toggleExpand()}>
-
         <View
           style={this.state.expanded ? styles.listRowExpanded : styles.listRow}
         >
